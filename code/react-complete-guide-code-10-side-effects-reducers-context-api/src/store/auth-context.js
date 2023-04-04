@@ -8,7 +8,6 @@ export const AuthContextProvider = (props) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
     const loggedIn = localStorage.getItem("isLogIn");
-
     loggedIn && setIsLoggedIn(true);
   }, []);
   const loginHandler = (email, password) => {
